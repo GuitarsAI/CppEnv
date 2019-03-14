@@ -13,8 +13,7 @@ dependencies:
   - xplot
   - bqplot
   - sos
-  - rise
-  - libopencv 
+  - rise 
   - widgetsnbextension
   - ipywidgets
   - jupyter_contrib_nbextensions
