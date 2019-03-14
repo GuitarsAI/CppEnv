@@ -1,0 +1,27 @@
+
+
+name: Cpp-GuitarsAI
+channels:
+  - conda-forge
+  - damianavila82
+  - anaconda
+  - QuantStack
+  - defaults
+dependencies:
+  - xeus-cling
+  - xwidgets
+  - xplot
+  - bqplot
+  - sos
+  - rise
+  - widgetsnbextension
+  - ipywidgets
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - jupyterlab
+  - jupyterlab_launcher
+  
+  - pip:
+    - sos-notebook
+    - sos-python
+    - jupyter_contrib_nbextensions
