@@ -1,6 +1,6 @@
 # Install SoS Extensions
 python -m sos_notebook.install
-jupyter labextension install jupyterlab-sos
+#jupyter labextension install jupyterlab-sos
 
 
 #Install OpenCV
