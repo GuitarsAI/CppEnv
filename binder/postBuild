@@ -10,17 +10,17 @@ wget https://github.com/opencv/opencv/archive/4.0.1.tar.gz
 find -name "*tar.gz" -exec tar xvzf '{}' \;
 #for a in `ls -1 *.tar.gz`; do tar -zxvf $a; done
 #tar -xvzf 'OpenCV 4.0.0-alpha.tar.gz' 
-cd opencv-opencv-e7c915a
-cmake -D BUILD_TIFF=ON -D WITH_CUDA=OFF -D ENABLE_AVX=OFF -D WITH_OPENGL=OFF -D WITH_OPENCL=OFF -D WITH_IPP=OFF -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_EIGEN=OFF -D WITH_V4L=OFF -D WITH_VTK=OFF -D BUILD_TESTS=OFF -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D BUILD_PERF_TESTS=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local .. 
-make -j4
-make install
-ldconfig
-exit
-cd ~/Cpp
-rm -rf opencv-opencv-e7c915a
+#cd opencv-opencv-e7c915a
+#cmake -D BUILD_TIFF=ON -D WITH_CUDA=OFF -D ENABLE_AVX=OFF -D WITH_OPENGL=OFF -D WITH_OPENCL=OFF -D WITH_IPP=OFF -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_EIGEN=OFF -D WITH_V4L=OFF -D WITH_VTK=OFF -D BUILD_TESTS=OFF -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D BUILD_PERF_TESTS=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local .. 
+#make -j4
+#make install
+#ldconfig
+#exit
+#cd ~/Cpp
+#rm -rf opencv-opencv-e7c915a
 
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-export PKG_CONFIG_PATH
+#PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+#export PKG_CONFIG_PATH
 
 # Jupyter Lab Extensions
 #jupyter labextension install bqplot
