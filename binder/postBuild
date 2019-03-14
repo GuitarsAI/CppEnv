@@ -1,0 +1,9 @@
+# Jupyter Lab Extensions
+jupyter labextension install bqplot
+
+# Install ipywidgest JupyterLab Exxtensions
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+# Install SoS Extensions
+python -m sos_notebook.install
+jupyter labextension install jupyterlab-sos
