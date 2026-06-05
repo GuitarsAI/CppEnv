@@ -12,20 +12,24 @@
         margin: 20px;
     }
 
+    #videoContainer,
+    #mapContainer {
+        width: 640px;
+        margin: 0 auto;
+    }
+
     #mapContainer {
         display: none;
-        margin-top: 20px;
     }
 </style>
 </head>
 <body>
 
-<h2>Watch the video to unlock the map</h2>
+<div id="videoContainer">
+    <h2>Watch the video to unlock the map</h2>
+    <div id="player"></div>
+</div>
 
-<!-- YouTube Player -->
-<div id="player"></div>
-
-<!-- Hidden Map -->
 <div id="mapContainer">
     <h3>Map Unlocked</h3>
     <iframe
@@ -52,14 +56,19 @@ function onYouTubeIframeAPIReady() {
             rel: 0
         },
         events: {
-            'onStateChange': onPlayerStateChange
+            onStateChange: onPlayerStateChange
         }
     });
 }
 
-// Detect when the video ends
+// When the video finishes
 function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
+
+        // Hide the video section
+        document.getElementById('videoContainer').style.display = 'none';
+
+        // Show the map
         document.getElementById('mapContainer').style.display = 'block';
     }
 }
