@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Unlocks Map</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+    }
+
+    #mapContainer {
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Watch the video to unlock the map</h2>
+
+<!-- YouTube Player -->
+<div id="player"></div>
+
+<!-- Hidden Map -->
+<div id="mapContainer">
+    <h3>Map Unlocked</h3>
+    <iframe
+        src="https://www.google.com/maps/d/u/1/embed?mid=1K1VrCHns0nVC-WQim4xzsP_KW5ZzUSA&ehbc=2E312F"
+        width="640"
+        height="480"
+        style="border:0;"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+let player;
+
+// Called automatically by the YouTube API
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: '3U8WNyUVFkE',
+        playerVars: {
+            rel: 0
+        },
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// Detect when the video ends
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        document.getElementById('mapContainer').style.display = 'block';
+    }
+}
+</script>
+
+</body>
+</html>
